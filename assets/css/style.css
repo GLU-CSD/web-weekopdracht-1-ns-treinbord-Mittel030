@@ -37,6 +37,7 @@ body{
     border: 2px solid #000;
 }
 
+/*Rechts*/
 .WitVierkantRechts{
     position: relative;
     width: 94px;
@@ -58,9 +59,7 @@ body{
 .SpoorRechts::before{
     position: absolute;
     top: 5px;
-    right: 33px;
-    width: 40px;
-    height: 20px;
+    left: 20px;
     font-weight: bold;
     font-size: 11px;
     content: "spoor";
@@ -69,12 +68,98 @@ body{
 
 .tien::before{
     position:absolute;
-    top: 25px;
-    left: 5px;
-    width: 40px;
-    height: 40px;
+    top: 22px;
+    left: 6px;
     font-weight: bold;
     font-size: 65px;
     content: "1";
     color: rgb(0, 0, 106);
+}
+
+.acht::before{
+    position:absolute;
+    top: 22px;
+    left: 35px;
+    font-weight: bold;
+    font-size: 65px;
+    content: "8";
+    color: rgb(0, 0, 106);
+}
+
+.b::before{
+    position: absolute;
+    top: 27px;
+    left: 70px;
+    font-weight: bold;
+    font-size: 35px;
+    content: "b";
+    color: rgb(0, 0, 106);
+}
+
+/* Midden*/
+.WitVierkantMidden{
+    position: relative;
+    width: 475px;
+    height: 240px;
+    background-color: white;
+    margin-left: 3px;
+    margin-top: -4px;
+}
+
+.minuut::before{
+    position: absolute;
+    top: 12px;
+    left: 37px;
+    font-weight: bold;
+    font-size: 25px;
+    content: "minuut";
+    color: rgb(0, 0, 106);
+}
+
+.Een::before{
+    position: absolute;
+    top: -1px;
+    left: 11px;
+    font-weight: bold;
+    font-size: 40px;
+    content: "1";
+    color: rgb(0, 0, 106);
+}
+
+.Heerlen::before{
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    font-weight: bold;
+    font-size: 40px;
+    content: "Heerlen";
+    color: rgb(0, 0, 106);
+}
+
+.ReisOverzicht::before{
+    position: absolute;
+    top: 100px;
+    left: 10px;
+    font-weight: bold;
+    font-size: 25px;
+    content: "via 's-Hertogenbosch, Eindhoven, Weert, Roemond en Stilard";
+    color: rgb(0, 0, 106);
+}
+
+.Intercity::before{
+    position: absolute;
+    top: 5px;
+    right: 90px;
+    font-weight: bold;
+    font-size: 35px;
+    content: "Intercity";
+    color: rgb(0, 0, 106);
+}
+
+.Logo {
+    position: absolute;
+    width: 80px;
+    height: auto;
+    top: 5px;
+    right: 5px;
 }
