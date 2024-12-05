@@ -7,7 +7,7 @@ body{
     opacity: 0.5;
     width: 936px;
     display: flex;
-   /* margin: 0 auto; */
+    /* margin: 0 auto; */
     font-family: Arial, Helvetica, sans-serif;
     border: 2px solid #000;
     margin-left: 124px;
@@ -16,7 +16,7 @@ body{
 
 #left{
     width: 240px;
-    background-color: #f2f2f2;
+    background-color: rgb(207, 207, 207);
     height: 335px;
     border: 2px solid #000;
 }
@@ -24,7 +24,7 @@ body{
 #middle {
     width: 568px;
     height: 339px;
-    background-color: rgb(0, 0, 106);
+    background-color: blue;
     padding: 35px;
     box-sizing: border-box;
     border: 2px solid #000;
@@ -33,7 +33,7 @@ body{
 #right{
     width:128px;
     height: 335px;
-    background-color: rgb(0, 0, 106);
+    background-color: blue;
     border: 2px solid #000;
 }
 
@@ -53,7 +53,7 @@ body{
     right: 0;
     width: 18px;
     height: 18px;
-    background-color: rgb(0, 0, 106);
+    background-color: blue;
 }
 
 .SpoorRechts::before{
@@ -100,7 +100,7 @@ body{
 .WitVierkantMidden{
     position: relative;
     width: 475px;
-    height: 240px;
+    height: 245px;
     background-color: white;
     margin-left: 3px;
     margin-top: -4px;
@@ -162,4 +162,62 @@ body{
     height: auto;
     top: 5px;
     right: 5px;
+}
+
+.BlauwVakOnder {
+    position: relative;
+    width: 475px;
+    height: 25px;
+    margin-left: 3px;
+    top: 0px;
+    background-color: darkblue;
+}
+
+.Hierna::before {
+    position: absolute;
+    top: 0px;
+    left: 5px;
+    font-weight: bold;
+    font-size: 19px;
+    content: "Hierna/next: 08:54 IC Venlo";
+    color: white;
+}
+
+/*Klok*/
+.clock-container { 
+    width: 200px;
+    height: 200px;
+    background-color: gray;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 100px;
+}
+
+.clock-screen {
+    position: relative; 
+    width: 90%;
+    height: 90%;
+    background-color: white;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.hour {
+    position: absolute;
+    width: 10px;
+    height: 30px;
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25%;
+    transform: rotate(calc(var(--i) * 30deg)) translate(0, -140px);
+    scale: 55%;
 }
