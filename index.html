@@ -1,57 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weekopdracht - NS-Treinbord</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" type="image/x-icon" href="https://mecurity.com/wp-content/uploads/2019/07/Nederlandse-spoorwegen-NS-logo.png">
-</head>
-<body>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://mecurity.com/wp-content/uploads/2019/07/Nederlandse-spoorwegen-NS-logo.png"
+    />
+  </head>
+  <body>
     <div id="container">
-        <div id="left">
-            <!-- hier komt de klok -->
-            <div class="clock-container">
-                <div class="clock-screen">
-                        <div class="hour" style="--i: 1;"></div>
-                        <div class="hour" style="--i: 2;"></div>
-                        <div class="hour" style="--i: 3;"></div>
-                        <div class="hour" style="--i: 4;"></div>
-                        <div class="hour" style="--i: 5;"></div>
-                        <div class="hour" style="--i: 6;"></div>
-                        <div class="hour" style="--i: 7;"></div>
-                        <div class="hour" style="--i: 8;"></div>
-                        <div class="hour" style="--i: 9;"></div>
-                        <div class="hour" style="--i: 10;"></div>
-                        <div class="hour" style="--i: 11;"></div>
-                        <div class="hour" style="--i: 12;"></div>   
-                </div>
+      <div id="left">
+        <!-- hier komt de klok -->
+         <div class="container-klok"></div>
+        <div id="klok">
+          <div id="wijzer-uur"></div>
+          <div id="wijzer-min"></div>
+          <div id="wijzer-sec">
+            <div class="line"></div>
+            <div class="circle"></div>
+            <div class="line"></div>
+          </div>
+          <div id="minuten"></div>
         </div>
-        <div id="middle">
-            <!-- Hier komt de reizigers info -->
-             <div class="WitVierkantMidden">
-                <span class="minuut"></span>
-                <span class="Een"></span>
-                <span class="Heerlen"></span>
-                <span class="ReisOverzicht"></span>
-                <span class="Intercity"></span>
-                <img src="/assets/img/ns_logo.png" alt="Ns_logo" class="Logo">
-             </div>
-             <div class="BlauwVakOnder">
-                <span class="Hierna"></span>
-             </div>
+      </div>
+      <div id="middle">
+        <!-- Hier komt de reizigers info -->
+        <div class="WitVierkantMidden">
+          <span class="minuut"></span>
+          <span class="Een"></span>
+          <span class="Heerlen"></span>
+          <span class="ReisOverzicht"></span>
+          <span class="Intercity"></span>
+          <img src="/assets/img/ns_logo.png" alt="Ns_logo" class="Logo" />
         </div>
-        <div id="right">
-            <!-- hier komt het spoor nummer -->
-             <div class="WitVierkantRechts">
-                <div class="BlauwVierkantRechts"></div>
-                <span class="SpoorRechts"></span>
-                <span class="tien"></span>
-                <span class="acht"></span>
-                <span class="b"></span>
-            </div>
-             
+        <div class="BlauwVakOnder">
+          <span class="Hierna"></span>
         </div>
+      </div>
+      <div id="right">
+        <!-- hier komt het spoor nummer -->
+        <div class="WitVierkantRechts">
+          <div class="BlauwVierkantRechts"></div>
+          <span class="SpoorRechts"></span>
+          <span class="tien"></span>
+          <span class="acht"></span>
+          <span class="b"></span>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
+  <script src="clock.js"></script>
 </html>

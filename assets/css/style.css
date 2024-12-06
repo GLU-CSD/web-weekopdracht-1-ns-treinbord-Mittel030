@@ -4,7 +4,7 @@ body{
 }
 
 #container{
-    opacity: 0.5;
+    opacity: 1;
     width: 936px;
     display: flex;
     /* margin: 0 auto; */
@@ -184,40 +184,161 @@ body{
 }
 
 /*Klok*/
-.clock-container { 
-    width: 200px;
-    height: 200px;
-    background-color: gray;
-    border-radius: 100%;
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  html,
+  body {
+    height: 100%;
+    background: #eee;
     display: flex;
-    justify-content: center;
     align-items: center;
-
-    margin-bottom: 100px;
-}
-
-.clock-screen {
-    position: relative; 
-    width: 90%;
-    height: 90%;
-    background-color: white;
-    border-radius: 100%;
-    display: flex;
     justify-content: center;
-    align-items: center;
-}
+  }
+  
+  #klok {
+    width: 77vmin;
+    height: 77vmin;
+    border-radius: 10vmin;
+    opacity: 0;
+    transition: all 0.2s;
+    scale: 25%;
+    margin-top: -180px;
+    margin-left: -180px;
+  }
+  body.loaded #klok {
+    opacity: 1;
+  }
+  
+    #wijzer-uur,
+    #wijzer-min,
+    #wijzer-sec {
+      position: absolute;
+      z-index: 3;
+      top: 50%;
+      left: 50%;
+      margin-left: -1.5vmin;
+      width: 3vmin;
+    }
+  
+    body.loaded #wijzer-uur,
+    body.loaded #wijzer-min,
+    body.loaded #wijzer-sec {
+      transition: transform 1s;
+    }
+  
+    #wijzer-uur,
+    #wijzer-min {
+      background: black;
+      border-radius: 0 0 1.5vmin 1.5vmin;
+    }
+  
+    #wijzer-uur,
+    #wijzer-min,
+    #wijzer-sec .line,
+    #wijzer-sec .circle {
+      box-shadow: -10px 5px 10px rgba(0,0,0,0.1);
+    }
+  
+    #wijzer-uur {
+      margin-top: -5vmin;
+      height: 30vmin;
+  
+      transform-origin: 1.5vmin 5vmin;
+    }
+  
+    #wijzer-min {
+      margin-top: -10vmin;
+      height: 43vmin;
+  
+      transform-origin: 1.5vmin 10vmin;
+    }
+  
+    #wijzer-sec {
+      margin-top: -5vmin;
+      height: 40vmin;
+  
+      transform-origin: 1.5vmin 5vmin;
+  
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+      #wijzer-sec:before {
+        content: "";
+        position: absolute;
+        top: 4vmin;
+        width: 2vmin;
+        height: 2vmin;
+        background: #990000;
+        border-radius: 2vmin;
+      }
+      #wijzer-sec .line {
+        background: #990000;
+        width: 1vmin;
+        height: 15vmin;
+      }
+      #wijzer-sec .line:first-child {
+        height: 20vmin;
+      }
+      #wijzer-sec .line:last-child {
+        height: 10vmin;
+        border-bottom-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+      }
+      #wijzer-sec .circle {
+        border: 1vmin solid #990000;
+        border-radius: 100%;
+        width: 4vmin;
+        height: 4vmin;
+      }
+  
+    #minuten {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+    }
+      #minuten .minuut {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -3vmin;
+        margin-top: -0.5vmin;
+        width: 6vmin;
+        height: 1.5vmin;
+  
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+      #minuten .minuut:before {
+        content: "";
+        display: block;
+        background: #1441AD;
+        width: 1vmin;
+        height: 1vmin;
+        border-radius: 3vmin
+      }
+      #minuten .minuut:nth-child(5n+1):before {
+        width: 6vmin;
+        height: 3vmin;
+      }
+    
 
-
-.hour {
-    position: absolute;
-    width: 10px;
-    height: 30px;
-    background: #000;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 25%;
-    transform: rotate(calc(var(--i) * 30deg)) translate(0, -140px);
-    scale: 55%;
+.container-klok {
+width: 100px;
+height: 100px;
+border-radius: 50%;
+scale: 160%;
+background-color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+position: absolute;
+margin-left: 58px;
+margin-top: 58px;
 }
